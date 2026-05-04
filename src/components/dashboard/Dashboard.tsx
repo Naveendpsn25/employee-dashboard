@@ -21,7 +21,7 @@ export default function Dashboard() {
     useEffect(() => {
   const fetchEmployees = async () => {
     try {
-      const response = await fetch("http://localhost:3000/employees");
+      const response = await fetch("https://employee-dashboard-29et.onrender.com/employees");
       const data = await response.json();
       dispatch(setEmployees(data));
     } catch (error) {

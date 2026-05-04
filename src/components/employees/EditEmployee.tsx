@@ -16,7 +16,7 @@ export default function EditEmployee() {
   const { data, isLoading } = useQuery({
     queryKey: ["employee", id],
     queryFn: async () => {
-      const res = await fetch(`http://localhost:3000/employees/${id}`);
+      const res = await fetch(`https://employee-dashboard-29et.onrender.com/employees${id}`);
       return res.json();
     },
   });
@@ -32,7 +32,7 @@ export default function EditEmployee() {
   // Update mutation
   const mutation = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`http://localhost:3000/employees/${id}`, {
+      const res = await fetch(`https://employee-dashboard-29et.onrender.com/employees${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

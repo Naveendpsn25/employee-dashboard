@@ -14,7 +14,7 @@ export default function AddEmployee() {
 
     const mutation = useMutation({
     mutationFn: async (newEmployee: any) => {
-        const response = await fetch("http://localhost:3000/employees", {
+        const response = await fetch("https://employee-dashboard-29et.onrender.com/employees", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

@@ -32,7 +32,7 @@ export default function Register() {
             role: data.role,
             statusbar: "Active"
         }
-        const response = await fetch("http://localhost:3000/users", {
+        const response = await fetch("https://employee-dashboard-29et.onrender.com/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"            

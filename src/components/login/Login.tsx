@@ -24,7 +24,7 @@ export default function Login() {
     const loginUser = useAuthStore((state) => state.login)
     const onSubmit = async (data: LoginFormData) => {
         try {
-            const response = await fetch(`http://localhost:3000/users?email=${data.email}&password=${data.password}`);
+            const response = await fetch(`https://employee-dashboard-29et.onrender.com/users?email=${data.email}&password=${data.password}`);
             const result = await response.json();
             if (result.length > 0) {
                 alert("Login successful!");
