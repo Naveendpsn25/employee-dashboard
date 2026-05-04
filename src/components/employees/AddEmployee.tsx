@@ -9,8 +9,9 @@ export default function AddEmployee() {
     const [email, setEmail] = useState("")
     const [role, setRole] = useState("")
     
-    const queryClient = useQueryClient()
     const navigate = useNavigate()
+    const queryClient = useQueryClient()
+    // const navigate = useNavigate()
 
     const mutation = useMutation({
     mutationFn: async (newEmployee: any) => {
@@ -20,7 +21,7 @@ export default function AddEmployee() {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(newEmployee),
-        });
+        })
     return response.json();
   },
   onSuccess: () => {
@@ -33,7 +34,6 @@ export default function AddEmployee() {
                                     department: "General",
                                     salary: 0,
                                     status: "Active",
-                                    // joiningDate: new Date().toISOString().split("T")[0],
                                     location: "Not Assigned"})}
 
     return (
@@ -44,7 +44,7 @@ export default function AddEmployee() {
             <TextField label="Email" fullWidth sx={{ mb: 2 }} value={email} onChange={(e) => setEmail(e.target.value)}/>
             <TextField label="Role" fullWidth sx={{ mb: 2 }} value={role} onChange={(e) => setRole(e.target.value)}/>
             <Button variant="contained" onClick={handleSubmit}>Add Employee</Button>
-            <Button variant="outlined" sx={{ml:2}}>Cancel</Button>
+            <Button variant="outlined" sx={{ml:2}} onClick={()=>navigate("/employees")}>Cancel</Button>
         </Box>
   );
 }

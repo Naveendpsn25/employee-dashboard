@@ -5,14 +5,13 @@ import Sidebar from "../sidebar/Sidebar";
 
 export default function MainLayout() {
     return (
-        <Box sx={{ display: 'flex' }}>
+        <Box>
             <Navbar />
             <Box sx={{display:"flex"}}>
-                <Sidebar />
+                
+                <Box><Sidebar/></Box>
 
-                <Box sx={{ p: 3 }}>
-                    <Outlet />
-                </Box>
+                <Box sx={{ p: 3 }}><Outlet /></Box>
             </Box>
         </Box>    
     )

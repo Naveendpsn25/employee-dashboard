@@ -66,7 +66,7 @@ export default function Register() {
                     <TextField label="Password" type="password" fullWidth {...register("password")} error={!!errors.password} helperText={errors.password?.message}/>
                     <TextField label="Confirm Password" type="password" fullWidth {...register("confirmPassword")} error={!!errors.confirmPassword} helperText={errors.confirmPassword?.message}/>
 
-                <TextField select label="Role"  fullWidth defaultValue="staff" {...register("role")}>
+                <TextField select label="Role"  fullWidth {...register("role")}>
                     <MenuItem value="staff">Staff</MenuItem>
                     <MenuItem value="hr">HR</MenuItem>
                     <MenuItem value="manager">Manager</MenuItem>

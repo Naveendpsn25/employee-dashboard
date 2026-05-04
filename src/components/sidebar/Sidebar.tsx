@@ -5,7 +5,7 @@ export default function Sidebar() {
     const navigate = useNavigate()
 
     return (
-        <Box sx={{ width: 200, bgcolor: 'background.paper' }}>
+        <Box sx={{ width: 200 }}>
             {/* <Typography variant="h6" sx={{ p: 2 }}></Typography> */}
             <List sx={{mt:6}}>
                 <ListItemButton onClick={() => navigate("/dashboard")}>

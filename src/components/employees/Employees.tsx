@@ -14,8 +14,8 @@ export default function Employees() {
 
     const queryClient = useQueryClient()
     const itemsPerPage = 6
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
+    const startIndex = (page - 1) * itemsPerPage
+    const endIndex = startIndex + itemsPerPage
 
     useEffect(() => {setPage(1)}, [search])
 
