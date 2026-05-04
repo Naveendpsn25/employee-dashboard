@@ -21,7 +21,7 @@ export default function Employees() {
 
     const deleteMutation = useMutation({
         mutationFn: async (id: string) => {
-            const res = await fetch(`http://localhost:3000/employees/${id}`, {
+            const res = await fetch(`https://employee-dashboard-29et.onrender.com/employees/${id}`, {
                 method: "DELETE",
             });
              if (!res.ok) {
@@ -51,7 +51,7 @@ export default function Employees() {
     }
 
     const fetchEmployees = async () => {
-        const response = await fetch("http://localhost:3000/employees");
+        const response = await fetch("https://employee-dashboard-29et.onrender.com/employees");
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
